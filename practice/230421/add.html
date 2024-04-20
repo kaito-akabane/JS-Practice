@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>1부터 더하는 함수</title>
+    </head>
+    <body>
+        <h1>1부터 더하는 함수</h1>
+        <script>
+            function calcSum(n) {
+                let sum = 0;
+                for(let i=1;i<=n;i++)
+                    sum+=i;
+                return sum;
+            }
+
+            let num = parseInt(prompt("1보다 큰 수를 입력하세요."));
+            document.write(`1부터 ${num}까지 모두 더하면 ${calcSum(num)}입니다.`);
+        </script>
+    </body>
+</html>

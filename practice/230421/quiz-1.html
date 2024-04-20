@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>부호 판단</title>
+    </head>
+    <body>
+        <h1>부호 판단</h1>
+        <script>
+            function sign(n) {
+                if(n>0) alert(`${n}은(는) 양수입니다.`);
+                else if(n<0) alert(`${n}은(는) 음수입니다.`);
+                else alert(`${n}은(는) 양수도 음수도 아닙니다.`);
+            }
+
+            const num = parseInt(prompt("수를 입력하세요."));
+            if(!isNaN(num)) sign(num);
+        </script>
+    </body>
+</html>

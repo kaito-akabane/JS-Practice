@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>콜백 함수 사용하기</title>
+    </head>
+    <body>
+        <h1>콜백 함수 사용하기</h1>
+        <script>
+            function showData(name, age) {
+                alert(`이름 : ${name}, 나이 : ${age}`);
+            }
+
+            function getdata(callback) {
+                let userName = prompt("이름을 입력하세요.");
+                let userAge = prompt("나이를 입력하세요.");
+                callback(userName, userAge);
+            }
+
+            getdata(showData);
+        </script>
+    </body>
+</html>

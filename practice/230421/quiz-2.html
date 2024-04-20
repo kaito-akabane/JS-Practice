@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>두 수의 최대공약수 구하기</title>
+    </head>
+    <body>
+        <h1>두 수의 최대공약수 구하기</h1>
+        <script>
+            function gcd(a, b) {
+                if(b==0) return a;
+                return gcd(b, a%b);
+            }
+
+            const num1 = parseInt(prompt("첫번째 수를 입력하세요."));
+            const num2 = parseInt(prompt("두번째 수를 입력하세요."));
+            if(!isNaN(num1)&&!isNaN(num2))
+                document.write(`${num1}과 ${num2}의 최대공약수 : ${gcd(num1, num2)}`);
+        </script>
+    </body>
+</html>
