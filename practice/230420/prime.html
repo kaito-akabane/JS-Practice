@@ -7,19 +7,19 @@
     <body>
         <script>
             let input = prompt("1보다 큰 수를 입력하세요.");
-            let isPrime = true;
+            let isPrime = true; // 소수일 것이라고 미리 가정
             if(input!=null) {
                 let num = parseInt(input);
-                if(num===1) document.write(`1은 소수도 합성수도 아닙니다.`);
+                if(num===1) document.write(`1은 소수도 합성수도 아닙니다.`); // 1은 소수도 합성수도 아니므로 예외 처리
                 else {
-                    for(let i=2;i<num;i++) {
-                        if(num%i==0) {
-                            document.write(`${num}은(는) 소수가 아닙니다.`);
-                            isPrime = false;
-                            break;
+                    for(let i=2;i<num;i++) { // 1과 자신 이외의 수로 나누어떨어지는지 판별
+                        if(num%i==0) { // 나누어떨어질 경우
+                            isPrime = false; // 소수가 아니므로 플래그 변경
+                            break; // 더 검사할 필요가 없으므로 for문 빠져나오기
                         }
                     }
                     if(isPrime) document.write(`${num}은(는) 소수입니다.`);
+                    else document.write(`${num}은(는) 소수가 아닙니다.`);
                 }
             }
         </script>
