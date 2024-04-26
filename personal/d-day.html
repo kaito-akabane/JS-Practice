@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            h1 {
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">2024년도 기사 제2회 실기 시험</h1>
+        <h2 align="center"></h2>
+        <script>
+            const result = document.querySelector("h2");
+
+            function dDay() {
+                const targetTime = new Date('2024-04-27T13:00:00');
+                const currentTime = new Date();
+                const diff = targetTime - currentTime;
+
+                const diffHour = Math.floor((diff / (1000*60*60)) % 24);
+                const diffMin = Math.floor((diff / (1000*60)) % 60);
+                const diffSec = Math.floor(diff / 1000 % 60);
+
+                result.innerText = `${diffHour}시간 ${diffMin}분 ${diffSec}초`;
+            }
+
+            dDay();
+            setInterval(dDay, 1000);
+        </script>
+    </body>
+</html>
